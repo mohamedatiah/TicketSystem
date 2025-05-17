@@ -1,13 +1,13 @@
 ﻿using TransfloRepository.Data;
 
-namespace TransVault.Infrastructure.Data
+namespace FutureWorkshopTicketSystem.Infrastructure.Data
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly TransVaultDbContext _context;
+        private readonly FutureWorkshopTicketSystemDbContext _context;
         private readonly Dictionary<Type, object> _repositories = new();
 
-        public UnitOfWork(TransVaultDbContext context)
+        public UnitOfWork(FutureWorkshopTicketSystemDbContext context)
         {
             _context = context;
         }

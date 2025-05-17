@@ -2,7 +2,7 @@
 
 using AutoMapper;
 
-namespace TransVault.Application.Services
+namespace FutureWorkshopTicketSystem.Application.Services
 {
     public class AttachmentService : IAttachmentService
     {

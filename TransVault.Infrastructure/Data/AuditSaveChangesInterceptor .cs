@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using TransVault.Domain.Common;
+using FutureWorkshopTicketSystem.Domain.Common;
 
-namespace TransVault.Infrastructure.Data
+namespace FutureWorkshopTicketSystem.Infrastructure.Data
 {
     public class AuditSaveChangesInterceptor : SaveChangesInterceptor
     {

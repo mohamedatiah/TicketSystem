@@ -1,4 +1,4 @@
-namespace TransVault.Application.DTOs
+namespace FutureWorkshopTicketSystem.Application.DTOs
 {
     public class TicketNoteDTO
     {

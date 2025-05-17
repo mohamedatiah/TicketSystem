@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using TransVault.Application.DTOs;
-using TransVault.Application.Interfaces;
-using TransVault.Common;
+using FutureWorkshopTicketSystem.Application.DTOs;
+using FutureWorkshopTicketSystem.Application.Interfaces;
+using FutureWorkshopTicketSystem.Common;
 
-namespace TransVault.Controllers
+namespace FutureWorkshopTicketSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

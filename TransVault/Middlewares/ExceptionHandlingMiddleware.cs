@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Text.Json;
-using TransVault.Common;
-using TransVault.Domain.Common;
+using FutureWorkshopTicketSystem.Common;
+using FutureWorkshopTicketSystem.Domain.Common;
 
-namespace TransVault.Middlewares
+namespace FutureWorkshopTicketSystem.Middlewares
 {
     public class ExceptionHandlingMiddleware
     {
@@ -22,9 +22,9 @@ namespace TransVault.Middlewares
             {
                 await _next(context);
             }
-            catch (BaseTransVaultException ex)
+            catch (BaseFutureWorkshopTicketSystemException ex)
             {
-                await HandleTransVaultExceptionAsync(context, ex);
+                await HandleFutureWorkshopTicketSystemExceptionAsync(context, ex);
             }
             catch (Exception ex)
             {
@@ -34,7 +34,7 @@ namespace TransVault.Middlewares
 
         private async Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            var response = new TransVaultResponse<string>()
+            var response = new FutureWorkshopTicketSystemResponse<string>()
             {
                 HttpStatusCode = HttpStatusCode.InternalServerError,
                 Message = exception.Message,
@@ -49,9 +49,9 @@ namespace TransVault.Middlewares
             var jsonResponse = JsonSerializer.Serialize(response);
             await context.Response.WriteAsync(jsonResponse);
         }
-        private async Task HandleTransVaultExceptionAsync(HttpContext context, BaseTransVaultException exception)
+        private async Task HandleFutureWorkshopTicketSystemExceptionAsync(HttpContext context, BaseFutureWorkshopTicketSystemException exception)
         {
-            var response = new TransVaultResponse<string>()
+            var response = new FutureWorkshopTicketSystemResponse<string>()
             {
                 HttpStatusCode = HttpStatusCode.BadRequest,
                 Message = exception.Message,

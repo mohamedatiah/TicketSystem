@@ -23,9 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TransVault.Application\TransVault.Application.csproj" />
-    <ProjectReference Include="..\TransVault.Domain\TransVault.Domain.csproj" />
-    <ProjectReference Include="..\TransVault.Infrastructure\TransVault.Infrastructure.csproj" />
+    <ProjectReference Include="..\TransVault.Application\FutureWorkshopTicketSystem.Application.csproj" />
+    <ProjectReference Include="..\TransVault.Domain\FutureWorkshopTicketSystem.Domain.csproj" />
+    <ProjectReference Include="..\TransVault.Infrastructure\FutureWorkshopTicketSystem.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using TransVault.Domain.Common;
+using FutureWorkshopTicketSystem.Domain.Common;
 
-namespace TransVault.Application.Services
+namespace FutureWorkshopTicketSystem.Application.Services
 {
     public class TicketNoteService : ITicketNoteService
     {
@@ -25,7 +25,7 @@ namespace TransVault.Application.Services
         public async Task UpdateNote(TicketNoteDTO dto)
         {
             var note = await _unitOfWork.Repository<TicketNote>().FindAsync(dto.Id);
-            if (note == null) throw new BaseTransVaultException($"Ticket Note with id=${dto.Id} not found");
+            if (note == null) throw new BaseFutureWorkshopTicketSystemException($"Ticket Note with id=${dto.Id} not found");
 
             _mapper.Map(dto, note);
             await _unitOfWork.SaveChangesAsync();
@@ -34,7 +34,7 @@ namespace TransVault.Application.Services
         public async Task<bool> DeleteNote(int id)
         {
             var note = await _unitOfWork.Repository<TicketNote>().FindAsync(id);
-            if (note == null) throw new BaseTransVaultException($"Ticket Note with id=${id} not found");
+            if (note == null) throw new BaseFutureWorkshopTicketSystemException($"Ticket Note with id=${id} not found");
             _unitOfWork.Repository<TicketNote>().Delete(note);
             await _unitOfWork.SaveChangesAsync();
             return true;
@@ -43,7 +43,7 @@ namespace TransVault.Application.Services
         public async Task<TicketNoteDTO> GetNote(int id)
         {
             var note = await _unitOfWork.Repository<TicketNote>().FindAsync(id);
-            if(note==null) throw new BaseTransVaultException($"Ticket Note with id=${id} not found");
+            if(note==null) throw new BaseFutureWorkshopTicketSystemException($"Ticket Note with id=${id} not found");
             return _mapper.Map<TicketNoteDTO>(note);
         }
 

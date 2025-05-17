@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using TransVault.Domain.Common;
+using FutureWorkshopTicketSystem.Domain.Common;
 
-namespace TransVault.Domain.Entities
+namespace FutureWorkshopTicketSystem.Domain.Entities
 {
     public class User : BaseAuditableEntity
     {

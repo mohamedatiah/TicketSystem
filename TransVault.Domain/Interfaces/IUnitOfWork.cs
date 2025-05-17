@@ -1,4 +1,4 @@
-﻿namespace TransVault.Domain.Interfaces
+﻿namespace FutureWorkshopTicketSystem.Domain.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {

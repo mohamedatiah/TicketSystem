@@ -1,8 +1,8 @@
-﻿namespace TransVault.Infrastructure.Data
+﻿namespace FutureWorkshopTicketSystem.Infrastructure.Data
 {
-    public class TransVaultDbContext : DbContext
+    public class FutureWorkshopTicketSystemDbContext : DbContext
     {
-        public TransVaultDbContext(DbContextOptions options) : base(options)
+        public FutureWorkshopTicketSystemDbContext(DbContextOptions options) : base(options)
         {
         }
         public DbSet<User> Users { get; set; }

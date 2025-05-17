@@ -4,12 +4,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TransfloUser;
-using TransVault.Application.Interfaces;
-using TransVault.Application.Services;
-using TransVault.Domain.Interfaces;
-using TransVault.Extensions;
-using TransVault.Infrastructure.Data;
-using TransVault.Middlewares;
+using FutureWorkshopTicketSystem.Application.Interfaces;
+using FutureWorkshopTicketSystem.Application.Services;
+using FutureWorkshopTicketSystem.Domain.Interfaces;
+using FutureWorkshopTicketSystem.Extensions;
+using FutureWorkshopTicketSystem.Infrastructure.Data;
+using FutureWorkshopTicketSystem.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,16 +20,16 @@ builder.Services.AddSwaggerConfiguration();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 //builder.Services.AddDatabaseConfiguration();
-//builder.Services.AddDbContext<TransVaultDbContext>(option =>
+//builder.Services.AddDbContext<FutureWorkshopTicketSystemDbContext>(option =>
 //{
 //    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"))
 //          .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 //});
-builder.Services.AddDbContext<TransVaultDbContext>((provider, options) =>
+builder.Services.AddDbContext<FutureWorkshopTicketSystemDbContext>((provider, options) =>
 {
     var interceptor = provider.GetRequiredService<AuditSaveChangesInterceptor>();
 
-    options.UseInMemoryDatabase("TransVaultInMemoryDB").AddInterceptors(interceptor); // Give your in-memory database a name
+    options.UseInMemoryDatabase("FutureWorkshopTicketSystemInMemoryDB").AddInterceptors(interceptor); // Give your in-memory database a name
 
     //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
     //       .AddInterceptors(interceptor);

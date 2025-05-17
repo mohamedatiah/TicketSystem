@@ -1,4 +1,4 @@
-﻿namespace TransVault.Domain.Common
+﻿namespace FutureWorkshopTicketSystem.Domain.Common
 {
     public abstract class BaseAuditableEntity : BaseEntity
     {

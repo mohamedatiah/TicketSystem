@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TransVault.Domain\TransVault.Domain.csproj" />
+    <ProjectReference Include="..\TransVault.Domain\FutureWorkshopTicketSystem.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

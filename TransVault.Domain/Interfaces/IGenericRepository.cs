@@ -1,5 +1,5 @@
 ﻿using System.Linq.Expressions;
-namespace TransVault.Domain.Interfaces
+namespace FutureWorkshopTicketSystem.Domain.Interfaces
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {

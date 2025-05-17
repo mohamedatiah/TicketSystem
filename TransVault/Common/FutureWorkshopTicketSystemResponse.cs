@@ -1,8 +1,8 @@
 ﻿using System.Net;
 
-namespace TransVault.Common
+namespace FutureWorkshopTicketSystem.Common
 {
-    public class TransVaultResponse<T> where T : class
+    public class FutureWorkshopTicketSystemResponse<T> where T : class
     {
         public HttpStatusCode HttpStatusCode { get; set; }
         public T? Result { get; set; }

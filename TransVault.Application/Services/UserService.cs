@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using TransVault.Domain.Common;
+using FutureWorkshopTicketSystem.Domain.Common;
 
-namespace TransVault.Application.Services
+namespace FutureWorkshopTicketSystem.Application.Services
 {
     public class UserService : IUserService
     {
@@ -24,7 +24,7 @@ namespace TransVault.Application.Services
         public async Task UpdateUser(UserDTO updateDTO)
         {
             var user = await _unitOfWork.Repository<User>().FindAsync(updateDTO.Id);
-            if (user == null) throw new BaseTransVaultException($"User with id=${updateDTO.Id} not found");
+            if (user == null) throw new BaseFutureWorkshopTicketSystemException($"User with id=${updateDTO.Id} not found");
 
             _mapper.Map(updateDTO, user);
             await _unitOfWork.SaveChangesAsync();
@@ -32,7 +32,7 @@ namespace TransVault.Application.Services
         public async Task<bool> DeleteUser(int id)
         {
             var User = await _unitOfWork.Repository<User>().FindAsync(id);
-            if (User == null) throw new BaseTransVaultException($"User with id=$ {id} not found");
+            if (User == null) throw new BaseFutureWorkshopTicketSystemException($"User with id=$ {id} not found");
             _unitOfWork.Repository<User>().Delete(User);
             await _unitOfWork.SaveChangesAsync();
 

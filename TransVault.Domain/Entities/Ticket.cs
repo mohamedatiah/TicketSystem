@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using TransVault.Domain.Common;
+using FutureWorkshopTicketSystem.Domain.Common;
 
-namespace TransVault.Domain.Entities
+namespace FutureWorkshopTicketSystem.Domain.Entities
 {
     public class Ticket : BaseAuditableEntity
     {

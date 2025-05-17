@@ -1,4 +1,4 @@
-﻿global using TransVault.Application.DTOs;
-global using TransVault.Application.Interfaces;
-global using TransVault.Domain.Entities;
-global using TransVault.Domain.Interfaces;
+﻿global using FutureWorkshopTicketSystem.Application.DTOs;
+global using FutureWorkshopTicketSystem.Application.Interfaces;
+global using FutureWorkshopTicketSystem.Domain.Entities;
+global using FutureWorkshopTicketSystem.Domain.Interfaces;

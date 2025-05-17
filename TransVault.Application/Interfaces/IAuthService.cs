@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace TransVault.Application.Interfaces
+namespace FutureWorkshopTicketSystem.Application.Interfaces
 {
     public interface IAuthService
     {

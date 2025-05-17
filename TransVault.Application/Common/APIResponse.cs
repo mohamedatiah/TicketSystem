@@ -1,5 +1,5 @@
 ﻿using System.Net;
-namespace TransVault.Application.Common
+namespace FutureWorkshopTicketSystem.Application.Common
 {
     public class APIResponse
     {

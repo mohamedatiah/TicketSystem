@@ -1,6 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 
-namespace TransVault.Extensions
+namespace FutureWorkshopTicketSystem.Extensions
 {
     public static class SwaggerConfigurationExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TransVault.Application.DTOs
+namespace FutureWorkshopTicketSystem.Application.DTOs
 {
     public class UserDTO
     {

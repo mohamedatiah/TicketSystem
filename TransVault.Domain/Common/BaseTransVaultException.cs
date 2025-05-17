@@ -1,9 +1,9 @@
-﻿namespace TransVault.Domain.Common
+﻿namespace FutureWorkshopTicketSystem.Domain.Common
 {
-    public class BaseTransVaultException : Exception
+    public class BaseFutureWorkshopTicketSystemException : Exception
     {
 
-        public BaseTransVaultException(string message) : base(message) { }
-        public BaseTransVaultException(string message, Exception innerException) : base(message, innerException) { }
+        public BaseFutureWorkshopTicketSystemException(string message) : base(message) { }
+        public BaseFutureWorkshopTicketSystemException(string message, Exception innerException) : base(message, innerException) { }
     }
 }

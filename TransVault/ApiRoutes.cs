@@ -1,4 +1,4 @@
-﻿namespace TransVault
+﻿namespace FutureWorkshopTicketSystem
 {
     public static class ApiRoutes
     {
